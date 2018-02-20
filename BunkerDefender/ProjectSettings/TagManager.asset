@@ -13,10 +13,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Bullet
+  - Tower
+  - Path
+  - Board
   - 
   - 
   - 
@@ -40,4 +40,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Board
+    uniqueID: 2412256515
+    locked: 0
+  - name: Path
+    uniqueID: 2531762441
+    locked: 0
+  - name: Tower
+    uniqueID: 1812470287
+    locked: 0
+  - name: Bullet
+    uniqueID: 749006513
+    locked: 0
+  - name: Knight
+    uniqueID: 3307640201
     locked: 0
