@@ -51,10 +51,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\scripts\Knight\KnightLifeSpan.cs" />
      <Compile Include="Assets\scripts\Knight\KnightSpawner.cs" />
      <Compile Include="Assets\scripts\Path\Node.cs" />
      <Compile Include="Assets\scripts\Path\Path.cs" />
      <Compile Include="Assets\scripts\Path\PathFinder.cs" />
+     <Compile Include="Assets\scripts\Tower\ChangeWeapon.cs" />
      <Compile Include="Assets\scripts\Tower\shootGun.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

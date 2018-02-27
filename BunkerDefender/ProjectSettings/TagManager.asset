@@ -51,6 +51,15 @@ TagManager:
   - name: Tower
     uniqueID: 1812470287
     locked: 0
+  - name: Gun
+    uniqueID: 474111321
+    locked: 0
+  - name: Cannon
+    uniqueID: 1311272199
+    locked: 0
+  - name: Bomb
+    uniqueID: 3179549999
+    locked: 0
   - name: Bullet
     uniqueID: 749006513
     locked: 0
