@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TowerLifeSpan : MonoBehaviour {
-    private static int lifeCount = 3;
+    public int lifeCount;
 
 	// Use this for initialization
 	void Start () {

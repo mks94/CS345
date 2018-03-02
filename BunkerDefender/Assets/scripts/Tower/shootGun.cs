@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class shootGun : MonoBehaviour {
+public class ShootGun : MonoBehaviour {
 
 	public GameObject bullet;
 	public float speed = 5.0f;

@@ -3,34 +3,49 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PathFinder : MonoBehaviour {
-    private Node[] _nodes;
-    private Path path;
-    private int _currentNode;
-    private Vector3 _position;
-    private float _time;
+    public int currentWayPoint = 0;
+    public float speed;
+    public string pathToFollow;
 
-    //public GameObject Knight;
-    public float Speed;
+    private Transform targetWayPoint;
+    private List<Transform> wayPointList;
+    private Node[] Nodes;
 
-	// Use this for initialization
-	void Start () {
-        _nodes = GameObject.Find("Path").GetComponentsInChildren<Node>();
+    void Start()
+    {
+        Nodes = GameObject.Find(pathToFollow).GetComponentsInChildren<Node>();
+        wayPointList = new List<Transform>();
+        foreach (Node obj in Nodes)
+            wayPointList.Add(obj.transform);
     }
 
-    // Update is called once per frame
-    void Update () {
-        if (_currentNode == _nodes.Length)
-            Destroy(this.gameObject);
-
-        _position = _nodes[_currentNode].transform.position;
-        _time += Time.deltaTime * Speed;
-        if (this.transform.position != _position)
-            this.transform.position = Vector3.Lerp(this.transform.position, _position, _time);
-        else
+    void Update()
+    {
+        if (currentWayPoint < wayPointList.Count)
         {
-            _currentNode++;
-            _time = 0;
+            if (targetWayPoint == null)
+                targetWayPoint = wayPointList[currentWayPoint];
+            walk();
         }
+        else
+            Destroy(this.gameObject);
+    }
 
+    void walk()
+    {
+        // rotate towards the target
+        Vector3 vectorToTarget = targetWayPoint.position - transform.position;
+        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+        Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * speed);
+        
+        // move towards the target
+        this.transform.position = Vector3.MoveTowards(transform.position, targetWayPoint.position, speed * Time.deltaTime);
+
+        if (this.transform.position == targetWayPoint.position)
+        {
+            currentWayPoint++;
+            targetWayPoint = wayPointList[currentWayPoint];
+        }
     }
 }
