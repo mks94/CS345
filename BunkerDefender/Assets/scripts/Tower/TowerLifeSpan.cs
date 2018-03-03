@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TowerLifeSpan : MonoBehaviour {
-    public int lifeCount;
+    public int LifeCount;
+    public static int KnightsToKill = 30;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -15,15 +17,22 @@ public class TowerLifeSpan : MonoBehaviour {
 		
 	}
 
+    public static void HitKnight()
+    {
+        KnightsToKill--;
+        if(KnightsToKill == 0)
+            SceneManager.LoadScene(2);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "knight" || collision.gameObject.tag == "Knight")
         {
-            lifeCount--;
-            if (lifeCount == 0)
+            LifeCount--;
+            if (LifeCount == 0)
             {
                 Destroy(this.gameObject);
-                //Implement end game
+                SceneManager.LoadScene(3);
             }
         }
 

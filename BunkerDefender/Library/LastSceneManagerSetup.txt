@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/BunkerDefender.unity
+- path: Assets/Scenes/BunkerDefender.unity
   isLoaded: 1
   isActive: 1

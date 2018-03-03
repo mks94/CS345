@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class KnightLifeSpan : MonoBehaviour {
-
-	private int knightsToKill = 5;
-
 	// Use this for initialization
 	void Start () {
 		
@@ -22,7 +19,7 @@ public class KnightLifeSpan : MonoBehaviour {
         {
             Destroy(this.gameObject);
             Destroy(collision.gameObject);
-			knightsToKill--;
+            TowerLifeSpan.HitKnight();
         }
             
     }
