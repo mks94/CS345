@@ -59,6 +59,7 @@
      <Compile Include="Assets\scripts\Path\Path2Finder.cs" />
      <Compile Include="Assets\scripts\Path\PathFinder.cs" />
      <Compile Include="Assets\scripts\Tower\ChangeWeapon.cs" />
+     <Compile Include="Assets\scripts\Tower\DestroyObjectByTime.cs" />
      <Compile Include="Assets\scripts\Tower\RotateGun.cs" />
      <Compile Include="Assets\scripts\Tower\ShootGun.cs" />
      <Compile Include="Assets\scripts\Tower\TowerLifeSpan.cs" />
