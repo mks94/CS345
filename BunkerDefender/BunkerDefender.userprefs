@@ -1,8 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Tower\shootGun.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Path\PathFinder.cs">
     <Files>
       <File FileName="Assets\scripts\Tower\shootGun.cs" Line="28" Column="1" />
+      <File FileName="Assets\scripts\Tower\RotateGun.cs" Line="30" Column="3" />
+      <File FileName="Assets\scripts\Path\Path2Finder.cs" Line="39" Column="55" />
+      <File FileName="Assets\scripts\Path\PathFinder.cs" Line="39" Column="53" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

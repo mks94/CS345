@@ -36,7 +36,7 @@ public class PathFinder : MonoBehaviour {
         // rotate towards the target
         Vector3 vectorToTarget = targetWayPoint.position - transform.position;
         float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
-        Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+        Quaternion q = Quaternion.AngleAxis(angle+90, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * speed);
         
         // move towards the target
