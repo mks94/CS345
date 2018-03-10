@@ -68,7 +68,7 @@ Transform:
   m_GameObject: {fileID: 1797370118738740}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.1, y: -5.01, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children:
   - {fileID: 4096966467861826}
   m_Father: {fileID: 0}
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentWayPoint: 0
-  speed: 1.5
+  speed: 24
   pathToFollow: Path1
 --- !u!114 &114563826588662994
 MonoBehaviour:
@@ -161,7 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc5e995e996acdb40bd88a91db01b085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knightsToKill: 4
 --- !u!212 &212814844152061740
 SpriteRenderer:
   m_ObjectHideFlags: 1
