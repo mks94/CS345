@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - Knight
+  - CannonBall
   layers:
   - Default
   - TransparentFX
@@ -54,6 +55,9 @@ TagManager:
     locked: 0
   - name: Bullet
     uniqueID: 749006513
+    locked: 0
+  - name: CannonBall
+    uniqueID: 3462376175
     locked: 0
   - name: Gun
     uniqueID: 474111321
