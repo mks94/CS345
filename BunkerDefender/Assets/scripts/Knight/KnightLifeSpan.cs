@@ -16,13 +16,11 @@ public class KnightLifeSpan : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-		if (collision.gameObject.tag == "bullet" || collision.gameObject.tag == "Bullet") {
-			Destroy (this.gameObject);
-			Destroy (collision.gameObject);
-			TowerLifeSpan.HitKnight ();
-		} else if (collision.gameObject.tag == "CannonBall") {
-			Destroy (this.gameObject);
-			TowerLifeSpan.HitKnight ();
-		}
+        if (collision.gameObject.tag == "bullet" || collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "CannonBall")
+        {
+            Destroy(this.gameObject);
+            Destroy(collision.gameObject);
+            TowerLifeSpan.HitKnight();
+        } 
     }
 }
