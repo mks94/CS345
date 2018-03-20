@@ -25,7 +25,7 @@ public class Knight2Spawner : MonoBehaviour {
         {
             //Wait a bit to spawn more
             Knights = new List<GameObject>();
-            _spawnCoolDown = 4f;
+            _spawnCoolDown = 3f;
 
             //Get Random number for how many in the group to spawn
             int num = Random.Range(0, 2);

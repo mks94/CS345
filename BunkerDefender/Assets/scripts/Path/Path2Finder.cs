@@ -45,7 +45,8 @@ public class Path2Finder : MonoBehaviour {
         if (this.transform.position == targetWayPoint.position)
         {
             currentWayPoint++;
-            targetWayPoint = wayPointList[currentWayPoint];
+            if (currentWayPoint < wayPointList.Count)
+                targetWayPoint = wayPointList[currentWayPoint];
         }
     }
 }
